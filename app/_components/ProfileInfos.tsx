@@ -11,8 +11,8 @@ export default function ProfileInfos() {
         </span>{' '}
         I <span className="font-black text-accentPink-1">create</span>,{' '}
         <span className="font-black text-accentPink-1">code</span> and{' '}
-        <span className="font-black text-accentPink-1">enjoy</span>
-        every <span className="font-black text-accentPink-1">bit</span> of it!
+        <span className="font-black text-accentPink-1">enjoy</span> every{' '}
+        <span className="font-black text-accentPink-1">bit</span> of it!
       </p>
     </section>
   );
