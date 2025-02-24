@@ -2,7 +2,7 @@ import ProfileLogo from './ProfileLogo';
 
 export default function ProfileInfos() {
   return (
-    <section className="flex flex-col justify-center items-center">
+    <section className="flex flex-col justify-center items-center py-20">
       <ProfileLogo />
       <p className="max-w-md text-3xl text-center font-normal">
         Hello, my name is{' '}
