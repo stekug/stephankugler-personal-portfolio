@@ -1,13 +1,15 @@
 import type { Metadata } from 'next';
 
-import { Roboto_Mono } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 
-const roboto = Roboto_Mono({
+const roboto = Roboto({
+  weight: ['100', '400', '500', '700', '900'],
   subsets: ['latin'],
   display: 'swap',
 });
 
 import '@/app/_styles/globals.css';
+import Header from './_components/Header';
 
 export const metadata: Metadata = {
   title: 'Stephan Kugler - portfolio',
@@ -24,6 +26,7 @@ export default function RootLayout({
       <body
         className={`${roboto.className} antialiased bg-primary-3 text-primary-1 min-h-screen flex flex-col relative`}
       >
+        <Header />
         <div>
           <main>{children}</main>
         </div>
