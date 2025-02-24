@@ -1,3 +1,5 @@
+import ProfileInfos from './_components/ProfileInfos';
+
 export default function page() {
-  return <div></div>;
+  return <ProfileInfos />;
 }
