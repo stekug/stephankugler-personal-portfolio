@@ -1,17 +1,14 @@
-import LoremIpsum from './_components/LoremIpsum';
-import SectionProfileInfos from './_components/SectionProfileInfos';
+import SectionModul from './_components/SectionModul';
+import ProfileLogo from './_components/ProfileLogo';
+import ProfileText from './_components/ProfileText';
 
 export default function page() {
   return (
     <>
-      <SectionProfileInfos />;
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
-      <LoremIpsum />
+      <SectionModul customBg="bg-custom1">
+        <ProfileLogo />
+        <ProfileText />
+      </SectionModul>
     </>
   );
 }
