@@ -17,13 +17,13 @@ export default function ProfileText() {
       </p>
       <div className="flex justify-center gap-10 py-10">
         <Link href="https://github.com/stekug" target="_blank">
-          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-12 h-12" />
+          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all duration-500 w-12 h-12" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/stephan-kugler-149163115/"
           target="_blank"
         >
-          <Linkedin className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-12 h-12" />
+          <Linkedin className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all duration-500 w-12 h-12" />
         </Link>
       </div>
     </div>
