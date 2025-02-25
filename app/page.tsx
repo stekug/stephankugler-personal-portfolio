@@ -8,6 +8,10 @@ export default function page() {
       <LoremIpsum />
       <LoremIpsum />
       <LoremIpsum />
+      <LoremIpsum />
+      <LoremIpsum />
+      <LoremIpsum />
+      <LoremIpsum />
     </>
   );
 }

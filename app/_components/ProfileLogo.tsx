@@ -10,8 +10,8 @@ export default function ProfileLogo() {
           className="rounded-full shadow-md shadow-primary-2"
           src={profilePic}
           alt="Profile picture of Stephan Kugler"
-          height="350"
-          width="350"
+          height="260"
+          width="260"
           quality={80}
         />
       </Link>
