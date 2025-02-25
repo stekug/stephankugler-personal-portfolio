@@ -1,10 +1,6 @@
-import Image from 'next/image';
-import github from '@/public/github.svg';
-import Github from '@/app/_components/Github';
-
 import Link from 'next/link';
-import githubSocial from '@/public/github.svg';
-import linkedInSocial from '@/public/linkedin.svg';
+import Github from '@/app/_components/Github';
+import Linkedin from './Linkedin';
 
 export default function ProfileText() {
   return (
@@ -21,31 +17,14 @@ export default function ProfileText() {
       </p>
       <div className="flex justify-center gap-10 py-10">
         <Link href="https://github.com/stekug" target="_blank">
-          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-16 h-16" />
-        </Link>
-        <Link href="https://github.com/stekug" target="_blank">
-          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-16 h-16" />
-        </Link>
-        {/* <Link href="https://github.com/stekug" target="_blank">
-          <Image
-            src={githubSocial}
-            alt="Github logo"
-            width={40}
-            height={40}
-            className="fill-slate-50"
-          />
+          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-12 h-12" />
         </Link>
         <Link
           href="https://www.linkedin.com/in/stephan-kugler-149163115/"
           target="_blank"
         >
-          <Image
-            src={linkedInSocial}
-            alt="LinkedIn logo"
-            width={40}
-            height={40}
-          />
-        </Link> */}
+          <Linkedin className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-12 h-12" />
+        </Link>
       </div>
     </div>
   );
