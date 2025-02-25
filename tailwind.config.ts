@@ -35,6 +35,12 @@ export default {
           7: '#8339E6',
         },
       },
+      backgroundImage: {
+        custombg1:
+          'linear-gradient(0.36turn, rgb(14, 15, 34), rgb(47, 20, 82))',
+        custombg2:
+          'linear-gradient(-0.36turn, rgb(14, 15, 34), rgb(47, 20, 82))',
+      },
     },
   },
   plugins: [],

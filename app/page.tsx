@@ -1,10 +1,10 @@
 import LoremIpsum from './_components/LoremIpsum';
-import ProfileInfos from './_components/ProfileInfos';
+import SectionProfileInfos from './_components/SectionProfileInfos';
 
 export default function page() {
   return (
     <>
-      <ProfileInfos />;
+      <SectionProfileInfos />;
       <LoremIpsum />
       <LoremIpsum />
       <LoremIpsum />
