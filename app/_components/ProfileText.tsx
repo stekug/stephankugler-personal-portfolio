@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import github from '@/public/github.svg';
+import Github from '@/app/_components/Github';
+
 import Link from 'next/link';
 import githubSocial from '@/public/github.svg';
 import linkedInSocial from '@/public/linkedin.svg';
@@ -18,6 +21,12 @@ export default function ProfileText() {
       </p>
       <div className="flex justify-center gap-10 py-10">
         <Link href="https://github.com/stekug" target="_blank">
+          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-16 h-16" />
+        </Link>
+        <Link href="https://github.com/stekug" target="_blank">
+          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all w-16 h-16" />
+        </Link>
+        {/* <Link href="https://github.com/stekug" target="_blank">
           <Image
             src={githubSocial}
             alt="Github logo"
@@ -36,7 +45,7 @@ export default function ProfileText() {
             width={40}
             height={40}
           />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
