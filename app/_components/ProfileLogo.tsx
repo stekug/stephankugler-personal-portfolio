@@ -7,7 +7,7 @@ export default function ProfileLogo() {
     <div className="gap-10">
       <Link href="/" className="flex items-center z-10 rounded-full mt-2 py-5">
         <Image
-          className="rounded-full shadow-md shadow-primary-2"
+          className="rounded-full shadow-[0px_0px_60px_rgba(50,60,90,0.5)]"
           src={profilePic}
           alt="Profile picture of Stephan Kugler"
           height="260"
