@@ -1,32 +1,9 @@
-import Link from 'next/link';
-import Github from '@/app/_components/Github';
-import Linkedin from './Linkedin';
+import ProgressBar from './ProgressBar';
 
 export default function ProfileText() {
   return (
-    <div>
-      <p className="max-w-md mx-auto text-4xl text-center font-normal px-3">
-        Hello, my name is{' '}
-        <span className="font-black text-accentGreen-1 uppercase">
-          Stephan Kugler.
-        </span>{' '}
-        I <span className="font-black text-accentPink-1">create</span>,{' '}
-        <span className="font-black text-accentPink-1">code</span> and{' '}
-        <span className="font-black text-accentPink-1">enjoy</span> every{' '}
-        <span className="font-black text-accentPink-1">bit</span> of it!
-      </p>
-      <div className="flex justify-center py-10 gap-10">
-        <Link href="https://github.com/stekug" target="_blank">
-          <Github className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all duration-500 w-12 h-12" />
-        </Link>
-        <Link
-          href="https://www.linkedin.com/in/stephan-kugler-149163115/"
-          target="_blank"
-        >
-          <Linkedin className="fill-accentGreen-1 hover:fill-accentPink-1 hover:scale-110 transition-all duration-500 w-12 h-12" />
-        </Link>
-      </div>
-      <article className="text-lg max-w-2xl">
+    <>
+      <article className="text-lg max-w-2xl mb-8">
         <span className="text-xl font-black block text-accentPink-1 uppercase tracking-wide mb-4">
           Behind the code
         </span>
@@ -48,6 +25,26 @@ export default function ProfileText() {
           playing guitar, or diving into the latest tech trends. 🚀
         </p>
       </article>
-    </div>
+      <section className="text-lg max-w-2xl w-full">
+        <span className="text-xl font-black block text-accentPink-1 uppercase tracking-wide mb-4">
+          This is my current tech stack
+        </span>
+        <div>
+          <p>These are technologies I use in my day to day work. </p>
+          <div className="grid grid-cols-2">
+            <ProgressBar name="HTML5" progress={90} />
+            <ProgressBar name="CSS" progress={87} />
+            <ProgressBar name="Tailwind" progress={77} />
+            <ProgressBar name="Styled Components" progress={82} />
+            <ProgressBar name="Javascript" progress={86} />
+            <ProgressBar name="Typescript" progress={84} />
+            <ProgressBar name="React.js" progress={82} />
+            <ProgressBar name="Next.js" progress={76} />
+            <ProgressBar name="Supabase" progress={70} />
+            <ProgressBar name="MongoDB" progress={65} />
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

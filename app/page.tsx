@@ -7,6 +7,8 @@ export default function page() {
     <>
       <SectionModul customBg="bg-custom1">
         <ProfileLogo />
+      </SectionModul>
+      <SectionModul customBg="bg-custom2">
         <ProfileText />
       </SectionModul>
     </>
