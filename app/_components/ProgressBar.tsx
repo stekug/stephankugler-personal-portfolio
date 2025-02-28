@@ -5,7 +5,7 @@ interface Props {
 
 export default function ProgressBar({ name, progress }: Props) {
   return (
-    <div>
+    <div className="mt-1">
       <span className="text-m font-black block text-accentGreen-1 tracking-wide">
         {name}
       </span>

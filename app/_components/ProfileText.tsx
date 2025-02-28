@@ -31,7 +31,18 @@ export default function ProfileText() {
         </span>
         <div>
           <p>These are technologies I use in my day to day work. </p>
-          <ProgressBar name="HTML5" progress={85} />
+          <div className="grid grid-cols-2">
+            <ProgressBar name="HTML5" progress={90} />
+            <ProgressBar name="CSS" progress={87} />
+            <ProgressBar name="Tailwind" progress={77} />
+            <ProgressBar name="Styled Components" progress={82} />
+            <ProgressBar name="Javascript" progress={86} />
+            <ProgressBar name="Typescript" progress={84} />
+            <ProgressBar name="React.js" progress={82} />
+            <ProgressBar name="Next.js" progress={76} />
+            <ProgressBar name="Supabase" progress={70} />
+            <ProgressBar name="MongoDB" progress={65} />
+          </div>
         </div>
       </section>
     </>
