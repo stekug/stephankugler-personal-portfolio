@@ -17,7 +17,7 @@ export default function ProfileLogo() {
           alt="Profile picture of Stephan Kugler"
           height="350"
           width="350"
-          quality={80}
+          quality={100}
         />
       </Link>
 
