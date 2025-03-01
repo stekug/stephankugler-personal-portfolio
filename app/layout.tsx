@@ -1,9 +1,15 @@
 import type { Metadata } from 'next';
 
-import { Roboto } from 'next/font/google';
+import { Roboto, Roboto_Mono } from 'next/font/google';
 
 const roboto = Roboto({
   weight: ['100', '400', '500', '700', '900'],
+  subsets: ['latin'],
+  display: 'swap',
+});
+
+export const robotoMono = Roboto_Mono({
+  weight: '400',
   subsets: ['latin'],
   display: 'swap',
 });
