@@ -1,15 +1,12 @@
-import projects from '@/data/projects.json';
-import Project from './Project';
+import ProjektCarousel from "./ProjektCarousel";
 
 export default function Work() {
   return (
-    <section className="w-full max-w-2xl mb-8">
-      <span className="text-xl font-black block text-accentPink-1 uppercase tracking-wide mb-4">
+    <section className="mb-8 w-full max-w-2xl">
+      <span className="mb-4 block text-xl font-black uppercase tracking-wide text-accentPink-1">
         My Work
       </span>
-      {projects.map((project) => (
-        <Project project={project} key={project.id} />
-      ))}
+      <ProjektCarousel />
     </section>
   );
 }

@@ -1,4 +1,4 @@
-import { robotoMono } from "@/app/layout";
+import { robotoMono } from "@/app/_components/fonts";
 import Image from "next/image";
 import type { Project } from "@/app/_types/Projext";
 import TextExpander from "./TextExpander";
