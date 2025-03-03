@@ -1,6 +1,7 @@
-import SectionModul from './_components/SectionModul';
-import ProfileLogo from './_components/ProfileLogo';
-import ProfileText from './_components/ProfileText';
+import SectionModul from "./_components/SectionModul";
+import ProfileLogo from "./_components/ProfileLogo";
+import ProfileText from "./_components/ProfileText";
+import Work from "./_components/Work";
 
 export default function page() {
   return (
@@ -10,6 +11,9 @@ export default function page() {
       </SectionModul>
       <SectionModul customBg="bg-custom2">
         <ProfileText />
+      </SectionModul>
+      <SectionModul customBg="bg-custom1">
+        <Work />
       </SectionModul>
     </>
   );

@@ -1,19 +1,13 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
-import { Roboto } from 'next/font/google';
+import { roboto } from "./_components/fonts";
 
-const roboto = Roboto({
-  weight: ['100', '400', '500', '700', '900'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-import '@/app/_styles/globals.css';
-import Header from './_components/Header';
+import "@/app/_styles/globals.css";
+import Header from "./_components/Header";
 
 export const metadata: Metadata = {
-  title: 'Stephan Kugler - portfolio',
-  description: 'A portfolio about Stephan Kugler, made by Stephan Kugler.',
+  title: "Stephan Kugler - portfolio",
+  description: "A portfolio about Stephan Kugler, made by Stephan Kugler.",
 };
 
 export default function RootLayout({
@@ -24,7 +18,7 @@ export default function RootLayout({
   return (
     <html>
       <body
-        className={`${roboto.className} antialiased bg-black text-primary-1 min-h-screen flex flex-col relative`}
+        className={`${roboto.className} relative flex min-h-screen flex-col bg-black text-primary-1 antialiased`}
       >
         <Header />
         <div>

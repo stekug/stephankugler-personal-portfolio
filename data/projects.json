@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "title": "Mealove",
+    "description": "Mealove is a web application designed to help users manage their favorite recipes. Users can create, view, edit, and delete recipes. However, recipe editing and deletion are restricted to the logged-in recipe owner. The app features 10 main recipe categories for easy navigation and organization. Mealove aims to simplify the process of storing and sharing culinary creations, while offering personalized control for each user's content.",
+    "tech": "React, Next.js, Typescript, Cloudinary, Styled-Components, Node.js, SWR, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
+    "github": "https://github.com/stekug/recipe-manager-mealove",
+    "image": "/projects/mealove.png",
+    "type": "code",
+    "video": null
+  },
+  {
+    "id": "2",
+    "title": "The Wild Oasis",
+    "description": "The Wild Oasis Website is a Next.js application developed to explore and deepen my knowledge of modern web technologies. This project showcases advanced features of Next.js, such as static site generation, incremental static regeneration (ISR), and custom caching strategies. I integrated Supabase for authentication, authorization, and secure data management, including image uploads and user login systems. The website's design is crafted with Tailwind CSS and enhanced with Heroicons. Key functionalities include dynamic routing, client and server components, and context management using createContext and useContext. This project demonstrates my ability to build scalable and secure web applications with a focus on both performance and user experience.",
+    "tech": "React, Next.js 15, Auth.js, Tailwind CSS, Heroicons, Supabase",
+    "github": "https://github.com/stekug/wild-oasis-website",
+    "image": "/projects/thewildoasiswebsite.png",
+    "type": "code",
+    "video": null
+  },
+  {
+    "id": "3",
+    "title": "Mealove 3",
+    "description": "dsfsdfwerwerwersdfwsdfsdfsfsfwedfhdfh",
+    "tech": "React, Next.js, Styled-Components, Node.js, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
+    "github": "https://github.com/stekug/recipe-manager-mealove",
+    "image": "/projects/mealove.png",
+    "type": "code",
+    "video": null
+  }
+]
