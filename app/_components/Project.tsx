@@ -4,6 +4,7 @@ import type { Project } from "@/app/_types/Projext";
 import TextExpander from "./TextExpander";
 import Github from "./Github";
 import Link from "next/link";
+
 interface Props {
   project: Project;
 }
@@ -21,7 +22,7 @@ export default function Project({ project }: Props) {
         </span>
         <div className="flex flex-col">
           <p className={`${robotoMono.className} pt-2`}>
-            <TextExpander>{description}</TextExpander>
+            <TextExpander wordCount={30}>{description}</TextExpander>
           </p>
           <Image
             src={image}

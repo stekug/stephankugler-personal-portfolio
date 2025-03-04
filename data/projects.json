@@ -2,6 +2,7 @@
   {
     "id": "1",
     "title": "Mealove",
+    "subtitle": null,
     "description": "Mealove is a web application designed to help users manage their favorite recipes. Users can create, view, edit, and delete recipes. However, recipe editing and deletion are restricted to the logged-in recipe owner. The app features 10 main recipe categories for easy navigation and organization. Mealove aims to simplify the process of storing and sharing culinary creations, while offering personalized control for each user's content.",
     "tech": "React, Next.js, Typescript, Cloudinary, Styled-Components, Node.js, SWR, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
     "github": "https://github.com/stekug/recipe-manager-mealove",
@@ -12,6 +13,7 @@
   {
     "id": "2",
     "title": "The Wild Oasis",
+    "subtitle": null,
     "description": "The Wild Oasis Website is a Next.js application developed to explore and deepen my knowledge of modern web technologies. This project showcases advanced features of Next.js, such as static site generation, incremental static regeneration (ISR), and custom caching strategies. I integrated Supabase for authentication, authorization, and secure data management, including image uploads and user login systems. The website's design is crafted with Tailwind CSS and enhanced with Heroicons. Key functionalities include dynamic routing, client and server components, and context management using createContext and useContext. This project demonstrates my ability to build scalable and secure web applications with a focus on both performance and user experience.",
     "tech": "React, Next.js 15, Auth.js, Tailwind CSS, Heroicons, Supabase",
     "github": "https://github.com/stekug/wild-oasis-website",
@@ -22,11 +24,34 @@
   {
     "id": "3",
     "title": "Mealove 3",
+    "subtitle": null,
     "description": "dsfsdfwerwerwersdfwsdfsdfsfsfwedfhdfh",
     "tech": "React, Next.js, Styled-Components, Node.js, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
     "github": "https://github.com/stekug/recipe-manager-mealove",
     "image": "/projects/mealove.png",
     "type": "code",
     "video": null
+  },
+  {
+    "id": "4",
+    "title": "EFTA - Flight School Training Academy ",
+    "subtitle": "An Interactive Trade Fair Experience",
+    "description": "The project created an immersive 3D animation experience for EFTA’s presence at Dubai Airshow 2023. Detailed 3D models of the airport and its surroundings were crafted in Cinema 4D and then imported into Unreal Engine to build a dynamic virtual world. Visitors could explore the virtual airport interactively, gaining insights into the academy’s programs, facilities, and advanced simulators. Due to the need to run the experience on a laptop, traditional baked lighting was used instead of LUMEN, which required careful UV unwrapping to produce high-quality lightmaps. Additionally, an animated image film was produced in Unreal Engine, tracing the journey of a cadet group from the start of their training to the successful completion of the program.",
+    "tech": "React, Next.js, Styled-Components, Node.js, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
+    "github": null,
+    "image": "/projects/mealove.png",
+    "type": "3d",
+    "video": "https://www.youtube.com/embed/E47ewV05pS0?si=oB9u6xhLevkj5ODr"
+  },
+  {
+    "id": "5",
+    "title": "KLJasd alonmsd olkjas",
+    "subtitle": "lkjasndf",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla ea dolorem sed eligendi fugiat iste corporis, reprehenderit doloremque optio magnam error tempora sint quod expedita ut porro, accusamus aperiam? Animi sequi accusantium doloribus fuga explicabo dolore aut aspernatur eveniet exercitationem ut ab minima corrupti ex ad corporis sed eius repellat, necessitatibus iusto quidem dolores blanditiis. Perspiciatis pariatur doloribus nam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem nulla ea dolorem sed eligendi fugiat iste corporis, reprehenderit doloremque optio magnam error tempora sint quod expedita ut porro, accusamus aperiam? Animi sequi accusantium doloribus fuga explicabo dolore aut aspernatur eveniet exercitationem ut ab minima corrupti ex ad corporis sed eius repellat, necessitatibus iusto quidem dolores blanditiis. Perspiciatis pariatur doloribus nam! Harum ab recusandae voluptates architecto quos quia, aspernatur repellat debitis sint ipsum voluptas quisquam illum quidem! Illo quo fuga quos tempora nisi sunt distinctio nemo, mollitia aliquam corrupti ratione libero?",
+    "tech": "React, Next.js, Styled-Components, Node.js, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
+    "github": null,
+    "image": "/projects/mealove.png",
+    "type": "3d",
+    "video": "https://www.youtube.com/embed/E47ewV05pS0?si=oB9u6xhLevkj5ODr"
   }
 ]
