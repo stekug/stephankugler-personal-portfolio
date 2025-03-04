@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+
 import Projects3D from "./Projects3D";
+import ProjectButton from "./ProjectButton";
 
 export default function Work3D() {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,17 +14,22 @@ export default function Work3D() {
         My &quot;old&quot; 3D Work
       </span>
       <p>
-        Like I mentioned, before working as a developer, I created 3D
-        animations. If you are interested to see a selection of my
-        &quot;old&quot; work, you are more than welcome!
+        I mentioned that my background includes 3D animation. If you&apos;re
+        interested in exploring my earlier work, just click the button on the
+        website to see the projects.
       </p>
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="mt-4 rounded-md bg-accentGreen-1 px-1 font-bold text-primary-2 hover:bg-accentPink-1"
-      >
+      <ProjectButton onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "Hide 3D projects" : "Show 3D projects"}
-      </button>
-      {isOpen && <Projects3D />}
+      </ProjectButton>
+
+      {isOpen && (
+        <>
+          <Projects3D />
+          <ProjectButton onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? "Hide 3D projects" : "Show 3D projects"}
+          </ProjectButton>
+        </>
+      )}
     </section>
   );
 }
