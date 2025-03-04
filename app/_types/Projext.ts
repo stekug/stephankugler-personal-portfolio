@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   description: string;
   tech: string;
-  github: string;
+  github: string | null;
   image: string;
   type: string;
   video: string | null;
