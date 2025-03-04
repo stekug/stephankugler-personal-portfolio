@@ -1,6 +1,7 @@
 export interface Project {
   id: string;
   title: string;
+  subtitle: string | null;
   description: string;
   tech: string;
   github: string | null;
@@ -8,3 +9,5 @@ export interface Project {
   type: string;
   video: string | null;
 }
+
+export type ProjectVideo = Project["video"];

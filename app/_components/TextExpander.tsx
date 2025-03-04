@@ -4,14 +4,15 @@ import { useState } from "react";
 
 interface Props {
   children: string;
+  wordCount: number;
 }
 
-export default function TextExpander({ children }: Props) {
+export default function TextExpander({ children, wordCount }: Props) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const displayText = isExpanded
     ? children
-    : children.split(" ").slice(0, 20).join(" ") + "...";
+    : children.split(" ").slice(0, wordCount).join(" ") + "...";
 
   return (
     <span>
