@@ -1,16 +1,14 @@
-import IframeVideo from "./IframeVideo";
-import { Suspense } from "react";
-import VideoSkeleton from "./VideoSkeleton";
+import Project3D from "./Project3D";
+import projects from "@/data/projects.json";
 
 export default function Projects3D() {
+  const filteredProjects = projects.filter((project) => project.type === "3d");
+
   return (
-    <div>
-      <p>3d Projects</p>
-      <div className="">
-        <Suspense fallback={<VideoSkeleton />}>
-          <IframeVideo />
-        </Suspense>
-      </div>
+    <div className="mt-4">
+      {filteredProjects.map((project) => (
+        <Project3D key={project.id} project={project} />
+      ))}
     </div>
   );
 }

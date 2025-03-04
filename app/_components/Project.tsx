@@ -4,6 +4,7 @@ import type { Project } from "@/app/_types/Projext";
 import TextExpander from "./TextExpander";
 import Github from "./Github";
 import Link from "next/link";
+
 interface Props {
   project: Project;
 }

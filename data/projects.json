@@ -28,5 +28,15 @@
     "image": "/projects/mealove.png",
     "type": "code",
     "video": null
+  },
+  {
+    "id": "4",
+    "title": "Angeln mit Leidenschaft",
+    "description": "dsfsdfwerwerwersdfwsdfsdfsfsfwedfhdfh",
+    "tech": "React, Next.js, Styled-Components, Node.js, NextAuth.js, MongoDB, Mongoose, Vercel, Git, Github",
+    "github": "https://github.com/stekug/recipe-manager-mealove",
+    "image": "/projects/mealove.png",
+    "type": "3d",
+    "video": null
   }
 ]
