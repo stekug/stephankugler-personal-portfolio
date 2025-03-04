@@ -11,6 +11,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 export default function ProjektCarousel() {
+  const filteredProjects = projects.filter(
+    (project) => project.type === "code",
+  );
+
   return (
     <div className="relative">
       <div className="swiper-custom-pagination mb-4 flex justify-center gap-1" />
@@ -23,7 +27,7 @@ export default function ProjektCarousel() {
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}
       >
-        {projects.map((project) => (
+        {filteredProjects.map((project) => (
           <SwiperSlide key={project.id}>
             <Project project={project} />
           </SwiperSlide>
