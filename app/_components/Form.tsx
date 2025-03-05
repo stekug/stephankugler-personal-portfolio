@@ -1,4 +1,4 @@
-import { saveMessage } from "../_lib/actions";
+import { sendMessage } from "../_lib/actions";
 
 export default function Form() {
   const inputStyles =
@@ -18,7 +18,7 @@ export default function Form() {
         </p>
         <form
           className="flex flex-col justify-center gap-2 p-4"
-          action={saveMessage}
+          action={sendMessage}
         >
           <label htmlFor="name">Your Name:</label>
           <input id="name" className={inputStyles} name="name" type="text" />
