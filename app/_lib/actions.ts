@@ -2,7 +2,7 @@
 
 import axios from "axios";
 
-export async function sendMessage(formData: FormData): Promise<void> {
+export async function sendMessage(prevState: unknown, formData: FormData) {
   console.log("Message received!");
 
   const rawFormData = {
@@ -24,17 +24,25 @@ export async function sendMessage(formData: FormData): Promise<void> {
     `;
 
   try {
+    // For testing purposes, we'll wait 2 seconds before returning the response
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+    console.log("Sending message...");
     const response = await axios.post(telegramUrl, {
       chat_id: chatId,
       text: text,
     });
 
+    // For testing purposes, we'll wait 2 seconds before returning the response
+    await new Promise((resolve) => setTimeout(resolve, 3000));
     if (response.status === 200) {
       console.log("Message sent successfully!");
+      return { message: "message sent!" };
     } else {
       console.log("Failed to send message!", response.data);
+      return { message: "message not sent!" };
     }
   } catch (error) {
     console.error("Failed to send message:", error);
+    return { message: "erroro, could not sent message" };
   }
 }
