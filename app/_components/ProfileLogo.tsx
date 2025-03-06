@@ -6,7 +6,7 @@ import Linkedin from "./Linkedin";
 
 export default function ProfileLogo() {
   return (
-    <section className="mt-10 scroll-mt-20" id="home">
+    <section className="mt-10">
       <Link
         href="/"
         className="z-10 flex flex-col items-center rounded-full py-5"
