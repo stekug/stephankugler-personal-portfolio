@@ -89,7 +89,7 @@ export default function Form() {
           <button
             disabled={isPending}
             type="submit"
-            className="mt-2 w-full self-center rounded-lg bg-accentGreen-1 py-2 text-xl font-bold text-primary-2 shadow-lg transition-all duration-300 hover:bg-accentPink-1"
+            className="mt-2 w-full self-center rounded-lg bg-accentGreen-1 py-2 text-xl font-bold text-primary-2 shadow-lg transition-all duration-300 hover:bg-accentPink-1 disabled:cursor-not-allowed disabled:bg-primary-5 disabled:text-gray-500"
           >
             Submit
           </button>
