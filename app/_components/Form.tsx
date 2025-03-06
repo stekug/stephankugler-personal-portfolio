@@ -2,7 +2,7 @@
 
 import toast from "react-hot-toast";
 import { sendMessage } from "../_lib/actions";
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useState } from "react";
 
 const initialState = {
   message: "",
@@ -13,6 +13,13 @@ export default function Form() {
     sendMessage,
     initialState,
   );
+  const [message, setMessage] = useState("");
+  const messageMaxLength = 360;
+  const messageMinLength = 10;
+
+  function handleMessageChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    setMessage(event.target.value);
+  }
 
   const inputStyles =
     "bg-primary-5 p-2 border border-accentPink-1 rounded-md shadow-md focus:border-accentGreen-1 focus:outline-none focus:ring-0";
@@ -44,16 +51,41 @@ export default function Form() {
           action={formAction}
         >
           <label htmlFor="name">Your Name:</label>
-          <input id="name" className={inputStyles} name="name" type="text" />
+          <input
+            required
+            id="name"
+            className={inputStyles}
+            name="name"
+            type="text"
+          />
           <label htmlFor="email">Your E-Mail:</label>
-          <input id="email" className={inputStyles} name="email" type="email" />
+          <input
+            required
+            id="email"
+            className={inputStyles}
+            name="email"
+            type="email"
+          />
           <label htmlFor="message">Your Message:</label>
           <textarea
             id="message"
             className={inputStyles}
             rows={5}
             name="message"
+            required
+            maxLength={messageMaxLength}
+            minLength={messageMinLength}
+            onChange={handleMessageChange}
+            value={message}
           />
+          <p className="text-sm">
+            <span
+              className={`${message.length >= messageMaxLength - 40 ? "text-accentPink-1" : "text-accentGreen-1"} font-bold`}
+            >
+              {360 - message.length}
+            </span>{" "}
+            characters remaining
+          </p>
           <button
             disabled={isPending}
             type="submit"
