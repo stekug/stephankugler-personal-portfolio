@@ -19,7 +19,7 @@ export default function Form() {
 
   useEffect(() => {
     if (state?.message === "message sent!") {
-      toast.success("Message sent successfully!");
+      toast.success("Message sent!");
     } else if (state?.message === "message not sent!") {
       toast.error("Failed to send message, please try again!");
     } else if (state?.message === "Error, could not sent message") {
