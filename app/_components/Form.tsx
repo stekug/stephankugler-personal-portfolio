@@ -8,6 +8,9 @@ const initialState = {
   message: "",
 };
 
+const messageMaxLength = 360;
+const messageMinLength = 10;
+
 export default function Form() {
   const [state, formAction, isPending] = useActionState(
     sendMessage,
@@ -16,9 +19,6 @@ export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-
-  const messageMaxLength = 360;
-  const messageMinLength = 10;
 
   function handleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
     setName(event.target.value);
