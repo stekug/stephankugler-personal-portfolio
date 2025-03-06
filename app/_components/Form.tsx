@@ -1,7 +1,8 @@
 "use client";
 
+import toast from "react-hot-toast";
 import { sendMessage } from "../_lib/actions";
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
 
 const initialState = {
   message: "",
@@ -13,12 +14,18 @@ export default function Form() {
     initialState,
   );
 
-  console.log("mesage:", state);
-  console.log("formAction:", formAction);
-  console.log("pending:", isPending);
-
   const inputStyles =
     "bg-primary-5 p-2 border border-accentPink-1 rounded-md shadow-md focus:border-accentGreen-1 focus:outline-none focus:ring-0";
+
+  useEffect(() => {
+    if (state?.message === "message sent!") {
+      toast.success("Message sent successfully!");
+    } else if (state?.message === "message not sent!") {
+      toast.error("Failed to send message, please try again!");
+    } else if (state?.message === "Error, could not sent message") {
+      toast.error("Error, could not sent message");
+    }
+  }, [state]);
 
   return (
     <div className="w-full max-w-2xl">
@@ -47,7 +54,6 @@ export default function Form() {
             rows={5}
             name="message"
           />
-          <p aria-live="polite">{state?.message}</p>
           <button
             disabled={isPending}
             type="submit"

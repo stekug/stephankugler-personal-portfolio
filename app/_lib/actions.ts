@@ -24,16 +24,16 @@ export async function sendMessage(prevState: unknown, formData: FormData) {
     `;
 
   try {
-    // For testing purposes, we'll wait 2 seconds before returning the response
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // For testing purposes, we'll wait 3 seconds before returning the response
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     console.log("Sending message...");
     const response = await axios.post(telegramUrl, {
       chat_id: chatId,
       text: text,
     });
 
-    // For testing purposes, we'll wait 2 seconds before returning the response
-    await new Promise((resolve) => setTimeout(resolve, 3000));
+    // For testing purposes, we'll wait 3 seconds before returning the response
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
     if (response.status === 200) {
       console.log("Message sent successfully!");
       return { message: "message sent!" };
@@ -43,6 +43,6 @@ export async function sendMessage(prevState: unknown, formData: FormData) {
     }
   } catch (error) {
     console.error("Failed to send message:", error);
-    return { message: "erroro, could not sent message" };
+    return { message: "Error, could not sent message" };
   }
 }

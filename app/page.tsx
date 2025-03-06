@@ -4,10 +4,12 @@ import ProfileText from "./_components/ProfileText";
 import Work from "./_components/Work";
 import Work3D from "./_components/Work3D";
 import Form from "./_components/Form";
+import { Toaster } from "react-hot-toast";
 
 export default function page() {
   return (
     <>
+      <Toaster />
       <SectionModul customBg="bg-custom1">
         <ProfileLogo />
       </SectionModul>
