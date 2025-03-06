@@ -7,7 +7,7 @@ const linkStyles =
 export default function Navigation() {
   return (
     <nav className="fixed top-0 flex w-full overflow-visible bg-primary-8 py-5 backdrop-blur-sm">
-      <ul className="text-l flex w-full justify-center gap-12 font-extrabold">
+      <ul className="text-l flex w-full justify-center gap-6 font-extrabold">
         <li>
           <Link href="/" className={twMerge(linkStyles)}>
             Home
@@ -20,7 +20,12 @@ export default function Navigation() {
         </li>
         <li>
           <Link href="/" className={twMerge(linkStyles)}>
-            My Work
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link href="/" className={twMerge(linkStyles)}>
+            Throwback
           </Link>
         </li>
         <li>
