@@ -14,22 +14,22 @@ export default function Navigation() {
           </Link>
         </li>
         <li>
-          <Link href="/" className={twMerge(linkStyles)}>
+          <Link scroll={true} href="#about" className={twMerge(linkStyles)}>
             About
           </Link>
         </li>
         <li>
-          <Link href="/" className={twMerge(linkStyles)}>
+          <Link scroll={true} href="#work" className={twMerge(linkStyles)}>
             Work
           </Link>
         </li>
         <li>
-          <Link href="/" className={twMerge(linkStyles)}>
+          <Link scroll={true} href="#throwback" className={twMerge(linkStyles)}>
             Throwback
           </Link>
         </li>
         <li>
-          <Link href="/" className={twMerge(linkStyles)}>
+          <Link scroll={true} href="#contact" className={twMerge(linkStyles)}>
             Contact
           </Link>
         </li>

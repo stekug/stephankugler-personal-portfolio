@@ -47,7 +47,7 @@ export default function Form() {
   }, [state]);
 
   return (
-    <div className="w-full max-w-2xl">
+    <div className="w-full max-w-2xl scroll-mt-20" id="contact">
       <p>
         <span className="mb-4 block text-xl font-black uppercase tracking-wide text-accentPink-1">
           Contact me
