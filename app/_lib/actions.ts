@@ -2,10 +2,7 @@
 
 import axios from "axios";
 
-export async function sendMessage(
-  prevState: unknown,
-  formData: FormData,
-): Promise<{ message: string }> {
+export async function sendMessage(prevState: unknown, formData: FormData) {
   console.log("Message received!");
 
   const rawFormData = {

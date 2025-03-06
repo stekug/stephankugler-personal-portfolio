@@ -13,10 +13,19 @@ export default function Form() {
     sendMessage,
     initialState,
   );
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
   const messageMaxLength = 360;
   const messageMinLength = 10;
 
+  function handleNameChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value);
+  }
+  function handleEmailChange(event: React.ChangeEvent<HTMLInputElement>) {
+    setEmail(event.target.value);
+  }
   function handleMessageChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
     setMessage(event.target.value);
   }
@@ -27,6 +36,9 @@ export default function Form() {
   useEffect(() => {
     if (state?.message === "message sent!") {
       toast.success("Message sent!");
+      setName("");
+      setEmail("");
+      setMessage("");
     } else if (state?.message === "message not sent!") {
       toast.error("Failed to send message, please try again!");
     } else if (state?.message === "Error, could not sent message") {
@@ -57,6 +69,8 @@ export default function Form() {
             className={inputStyles}
             name="name"
             type="text"
+            onChange={handleNameChange}
+            value={name}
           />
           <label htmlFor="email">Your E-Mail:</label>
           <input
@@ -65,6 +79,8 @@ export default function Form() {
             className={inputStyles}
             name="email"
             type="email"
+            onChange={handleEmailChange}
+            value={email}
           />
           <label htmlFor="message">Your Message:</label>
           <textarea
