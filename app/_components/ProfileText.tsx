@@ -1,10 +1,10 @@
-import ProgressBar from './ProgressBar';
+import ProgressBar from "./ProgressBar";
 
 export default function ProfileText() {
   return (
     <>
-      <article className="text-lg max-w-2xl mb-8">
-        <span className="text-xl font-black block text-accentPink-1 uppercase tracking-wide mb-4">
+      <article className="mb-8 max-w-2xl scroll-mt-20 text-lg" id="about">
+        <span className="mb-4 block text-xl font-black uppercase tracking-wide text-accentPink-1">
           Behind the code
         </span>
         <p className="mb-4">
@@ -25,14 +25,14 @@ export default function ProfileText() {
           playing guitar, or diving into the latest tech trends. 🚀
         </p>
       </article>
-      <section className="text-lg max-w-2xl w-full">
-        <span className="text-xl font-black block text-accentPink-1 uppercase tracking-wide mb-4">
+      <section className="w-full max-w-2xl text-lg">
+        <span className="mb-4 block text-xl font-black uppercase tracking-wide text-accentPink-1">
           My current tech stack
         </span>
         <div>
           <p>
             These are technologies I use in my day to day work and I´m learning
-            at the moment.{' '}
+            at the moment.{" "}
           </p>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
             <ProgressBar name="HTML5" progress={90} />
