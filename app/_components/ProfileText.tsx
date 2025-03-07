@@ -12,7 +12,8 @@ export default function ProfileText() {
           design. My journey started in the creative industry, working on visual
           storytelling and interactive media. But my fascination with
           problem-solving and technology led me into software development, where
-          Node.js.
+          I now specialize in JavaScript, React, Angular and backend
+          technologies like Node.js.
         </p>
         <p className="mb-4">
           In 2025, I joined adesso as a software developer, where I get to work

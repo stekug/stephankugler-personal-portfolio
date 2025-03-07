@@ -9,7 +9,10 @@ export default function Work3D() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="mb-8 w-full max-w-2xl scroll-mt-20" id="throwback">
+    <section
+      className="mb-8 w-full max-w-2xl scroll-mt-20 text-lg"
+      id="throwback"
+    >
       <span className="mb-4 block text-xl font-black uppercase tracking-wide text-accentPink-1">
         Throwback: My 3D Creations
       </span>
