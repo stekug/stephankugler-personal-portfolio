@@ -9,7 +9,7 @@ export default function Navigation() {
     <nav className="text-md fixed top-0 z-50 flex w-full overflow-visible bg-primary-8 py-5 backdrop-blur-sm sm:text-xl md:text-2xl">
       <ul className="text-l flex w-full justify-center gap-6 font-extrabold md:gap-14">
         <li>
-          <Link scroll={true} href="/" className={twMerge(linkStyles)}>
+          <Link scroll={true} href="#home" className={twMerge(linkStyles)}>
             Home
           </Link>
         </li>
