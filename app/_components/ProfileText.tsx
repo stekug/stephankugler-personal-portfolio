@@ -1,4 +1,4 @@
-import ProgressBar from "./ProgressBar";
+import TechElement from "./TechElement";
 
 export default function ProfileText() {
   return (
@@ -12,7 +12,8 @@ export default function ProfileText() {
           design. My journey started in the creative industry, working on visual
           storytelling and interactive media. But my fascination with
           problem-solving and technology led me into software development, where
-          Node.js.
+          I now specialize in JavaScript, React, Angular and backend
+          technologies like Node.js.
         </p>
         <p className="mb-4">
           In 2025, I joined adesso as a software developer, where I get to work
@@ -34,19 +35,21 @@ export default function ProfileText() {
             These are technologies I use in my day to day work and I´m learning
             at the moment.{" "}
           </p>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
-            <ProgressBar name="HTML5" progress={90} />
-            <ProgressBar name="CSS" progress={87} />
-            <ProgressBar name="Tailwind" progress={77} />
-            <ProgressBar name="Styled Components" progress={82} />
-            <ProgressBar name="Javascript" progress={86} />
-            <ProgressBar name="Typescript" progress={81} />
-            <ProgressBar name="React.js" progress={82} />
-            <ProgressBar name="Next.js" progress={76} />
-            <ProgressBar name="Supabase" progress={70} />
-            <ProgressBar name="MongoDB" progress={65} />
-            <ProgressBar name="Node.js" progress={70} />
-            <ProgressBar name="Angular" progress={40} />
+          <div className="mt-2 flex flex-row flex-wrap gap-1 sm:gap-2">
+            <TechElement name="HTML5" />
+            <TechElement name="CSS" />
+            <TechElement name="React.js" />
+            <TechElement name="Next.js" />
+            <TechElement name="Javascript" />
+            <TechElement name="Node.js" />
+            <TechElement name="Auth.js" />
+            <TechElement name="Tailwind" />
+            <TechElement name="Styled Components" />
+            <TechElement name="Typescript" />
+            <TechElement name="Cloudinary" />
+            <TechElement name="Supabase" />
+            <TechElement name="MongoDB" />
+            <TechElement name="Angular" />
           </div>
         </div>
       </section>

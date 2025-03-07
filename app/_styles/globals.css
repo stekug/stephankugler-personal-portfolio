@@ -51,3 +51,7 @@
 .swiper-pagination {
   @apply absolute bottom-0 left-0 right-0 flex justify-center pb-4 !important; /* ⬅️ Immer unten, zentriert und mit Padding */
 }
+
+html {
+  scroll-behavior: smooth;
+}
