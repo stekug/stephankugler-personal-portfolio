@@ -39,3 +39,11 @@ This project uses **Next.js**. Below is a brief explanation on how to use the pr
 
 3. Open [http://localhost:3000](http://localhost:3000)
    with your browser to see the result.
+
+### Start directus CMS
+
+In terminal, in main folder, run:
+
+```bash
+docker-compose up -d
+```
