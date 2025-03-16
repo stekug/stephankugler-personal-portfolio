@@ -1,16 +1,22 @@
 services:
   directus:
-    image: directus/directus:11.3.2
+    image: directus/directus:11.5.1
     ports:
       - 8055:8055
+    env_file:
+      - ./env/directus.env
     volumes:
-      - database:/database
-      - uploads:/uploads
-      - extensions:/extensions
+      # - database:/database
+      # - uploads:/uploads
+      # - extensions:/extensions
+      - ./directus/database:/directus/database
+      - ./directus/uploads:/directus/uploads
+      - ./directus/extensions:/directus/extensions
     environment:
-      SECRET: '86a19a1ec8945ddebe0f19d8242b0711fffeaed7d4363175137a5eb725514ced'
-      ADMIN_EMAIL: 'stephankugler.stuff@gmail.com'
-      ADMIN_PASSWORD: 'stephan'
       DB_CLIENT: 'sqlite3'
       DB_FILENAME: '/directus/database/data.db'
       WEBSOCKETS_ENABLED: 'true'
+# volumes:
+#   database:
+#   uploads:
+#   extensions:
