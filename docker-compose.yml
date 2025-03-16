@@ -6,9 +6,9 @@ services:
     env_file:
       - ./env/directus.env
     volumes:
-      # - database:/database
-      # - uploads:/uploads
-      # - extensions:/extensions
+      # - database:/directus/database
+      # - uploads:/directus/uploads
+      # - extensions:/directus/extensions
       - ./directus/database:/directus/database
       - ./directus/uploads:/directus/uploads
       - ./directus/extensions:/directus/extensions
