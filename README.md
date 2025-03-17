@@ -39,3 +39,22 @@ This project uses **Next.js**. Below is a brief explanation on how to use the pr
 
 3. Open [http://localhost:3000](http://localhost:3000)
    with your browser to see the result.
+
+### Strapi Install / Start
+
+Strapi is running in a docker container
+Make sure that docker is installed on your system.
+
+Use the following command to start the build process and start the container:
+
+```bash
+docker-compose up -d
+```
+
+You can stop theh container and remove it by use this command:
+
+```bash
+docker-compose down
+```
+
+Open http://localhost:1337 with your browser to open the strapi admin panel.
