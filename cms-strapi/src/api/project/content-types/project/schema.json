@@ -4,17 +4,37 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "project"
+    "displayName": "project",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 40
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string",
+      "maxLength": 40
+    },
+    "tech": {
+      "type": "string",
+      "default": "html, css, react",
+      "required": true
+    },
+    "github": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string",
+      "required": true
     }
   }
 }
