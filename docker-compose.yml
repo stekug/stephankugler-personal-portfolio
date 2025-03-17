@@ -1,0 +1,26 @@
+services:
+  strapi:
+    container_name: strapi
+    build: ./cms-strapi
+    image: strapi:latest
+    # restart: unless-stopped
+    volumes:
+      - strapi-data:/opt/app/data
+      - strapi-data-tmp:/opt/app/.tmp
+      - ./cms-strapi/config:/opt/app/config
+      - ./cms-strapi/types:/opt/app/types
+      - ./cms-strapi/src:/opt/app/src
+      - ./cms-strapi/package.json:/opt/package.json
+      - ./cms-strapi/yarn.lock:/opt/yarn.lock
+      - ./cms-strapi/public/uploads:/opt/app/public/uploads
+      - ./cms-strapi/.env:/opt/app/.env
+
+    ports:
+      - '1337:1337'
+    networks:
+      - strapi
+networks:
+  strapi:
+volumes:
+  strapi-data:
+  strapi-data-tmp:
