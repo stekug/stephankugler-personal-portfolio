@@ -1,26 +1,48 @@
-services:
-  strapi:
-    container_name: strapi
-    build: ./cms-strapi
-    image: strapi:latest
-    # restart: unless-stopped
-    volumes:
-      - strapi-data:/opt/app/data
-      - strapi-data-tmp:/opt/app/.tmp
-      - ./cms-strapi/config:/opt/app/config
-      - ./cms-strapi/types:/opt/app/types
-      - ./cms-strapi/src:/opt/app/src
-      - ./cms-strapi/package.json:/opt/package.json
-      - ./cms-strapi/yarn.lock:/opt/yarn.lock
-      - ./cms-strapi/public/uploads:/opt/app/public/uploads
-      - ./cms-strapi/.env:/opt/app/.env
+version: '3.3'
 
+services:
+  nextjs:
+    image: node:18
+    container_name: nextjs
+    working_dir: /app
+    restart: always
+    networks:
+      - proxy_network
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=production
+      - STRAPI_URL=http://strapi:1337
+    ports:
+      - '3000:3000'
+    command: 'npm install && npm run build && npm run start'
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.nextjs.rule=Host(`dev.stephankugler.de`)'
+      - 'traefik.http.routers.nextjs.entrypoints=websecure'
+      - 'traefik.http.routers.nextjs.tls.certresolver=leresolver'
+
+  strapi:
+    image: strapi/strapi
+    container_name: strapi
+    restart: always
+    networks:
+      - proxy_network
+    volumes:
+      - ./cms-strapi:/srv/app
     ports:
       - '1337:1337'
-    networks:
-      - strapi
+    environment:
+      - NODE_ENV=production
+      - DATABASE_CLIENT=sqlite
+      - DATABASE_FILENAME=/srv/app/data.db
+    labels:
+      - 'traefik.enable=true'
+      - 'traefik.http.routers.strapi.rule=Host(`cms-dev.stephankugler.de`)'
+      - 'traefik.http.routers.strapi.entrypoints=websecure'
+      - 'traefik.http.routers.strapi.tls.certresolver=leresolver'
+
 networks:
-  strapi:
-volumes:
-  strapi-data:
-  strapi-data-tmp:
+  proxy_network:
+    external: true
