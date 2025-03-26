@@ -9,14 +9,15 @@ services:
     networks:
       - proxy_network
     volumes:
-      - ./client:/app
-      - /app/node_modules
+      - ./client:/app # Das gesamte Projekt wird ins Container-Verzeichnis /app gemountet
+      - /app/node_modules # Verhindert Probleme mit Dependencies
     environment:
       - NODE_ENV=production
       - STRAPI_URL=http://strapi:1337
     ports:
       - '3000:3000'
-    command: 'npm install && npm run build && npm run start'
+    command: >
+      sh -c "if [ ! -d node_modules ]; then npm install; fi && npm run build && npm run start"
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.nextjs.rule=Host(`dev.stephankugler.de`)'
