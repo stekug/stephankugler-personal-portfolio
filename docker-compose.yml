@@ -9,8 +9,7 @@ services:
     networks:
       - proxy_network
     volumes:
-      - ./client:/app # Das gesamte Projekt wird ins Container-Verzeichnis /app gemountet
-      - /app/node_modules # Verhindert Probleme mit Dependencies
+      - /opt/docker/stephankugler_dev/client:/app
     environment:
       - NODE_ENV=production
       - STRAPI_URL=http://strapi:1337
