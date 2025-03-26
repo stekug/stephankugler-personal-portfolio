@@ -9,7 +9,7 @@ services:
     networks:
       - proxy_network
     volumes:
-      - /opt/docker/stephankugler_dev/client:/app
+      - ./client:/app
     environment:
       - NODE_ENV=production
       - STRAPI_URL=http://strapi:1337
@@ -26,11 +26,12 @@ services:
   strapi:
     image: strapi/strapi
     container_name: strapi
+    working_dir: /cms-strapi
     restart: always
     networks:
       - proxy_network
     volumes:
-      - ./cms-strapi:/srv/app
+      - ./cms-strapi:/cms-srapi
     ports:
       - '1337:1337'
     environment:
